@@ -22,7 +22,7 @@ with connection:
         cursor.execute(f"""
                        INSERT INTO data (subject, mark, date, quarter) VALUES (
                        '{elem}',
-                       '{int(input(elem + ": "))}',
+                       '{float(input(elem + ": "))}',
                        '{date}',
                        '{quarter}'
                        )
