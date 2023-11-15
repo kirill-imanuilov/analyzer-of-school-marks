@@ -1,15 +1,16 @@
 from cursor import connection, cursor
 import matplotlib.pyplot as plt
+from get_config_data import get_config_data
 
-
-quarter = 'II'
-chart_title = 'title'
 
 with open('./subjects.txt', 'r') as file:
     subjects = file.readlines()
     # Delete '\n'
     for i in range(len(subjects)):
         subjects[i] = subjects[i][:-1]
+
+quarter: str = get_config_data(key='quarter')
+chart_title: str = get_config_data(key='chart_title')
 
 with connection:
     for subject in subjects:
