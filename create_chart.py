@@ -22,7 +22,7 @@ with connection:
         for elem in data:
             keys.append(elem[2])
             values.append(elem[1])
-        plt.plot(keys, values, label=data[0][0])
+        plt.plot(keys, values, label=f'{data[0][0]}: {data[-1][1]}')
 
 
     values = [4.50] * len(keys)
